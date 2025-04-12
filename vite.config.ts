@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   ssr: {
-    external: ['react', 'react-dom']
+    external: ['react', 'react-dom', 'debug', 'extend']
   },
   plugins: [
     honox({

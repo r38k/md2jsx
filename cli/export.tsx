@@ -16,6 +16,12 @@ if (!inputPath || !fs.existsSync(inputPath)) {
 const markdownText = fs.readFileSync(inputPath, "utf-8");
 
 // ReactコンポーネントをHTMLに変換 
+  /**
+   *  ReactコンポーネントをHTMLに変換
+   *  style.cssをロードするための<head>要素と、<body>要素内に
+   *  MarkdownToJsxコンポーネントをレンダリングする
+   *  themeName="dark"で、常にDarkテーマを適用する
+   */
 const html = renderToStaticMarkup( 
 <html lang="ja"> 
   <head> 

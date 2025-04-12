@@ -21,9 +21,8 @@ export default createRoute((c) => {
 
 #### 箇条書きリスト
 - リストアイテム 1
-- リストアイテム 2
-  - ネストされたアイテム
-- リストアイテム 3
+  - ネストされたアイテム1
+  - ネストされたアイテム2
 
 #### 番号付きリスト
 1. 最初のアイテム
@@ -84,32 +83,14 @@ body {
 | 山田 | 28 | エンジニア |
 | 佐藤 | 34 | デザイナー |
 | 鈴木 | 42 | マネージャー |
-
-### 数式（未対応）
-
-インライン数式: $E=mc^2$
-
-ブロック数式:
-$$
-\\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}
-$$
-
-### HTMLタグ（一部対応）
-
-<div style="color: red;">
-  HTMLタグは部分的にサポートされています。
-</div>
 `
 
   return c.render(
     <div className="p-4 max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">MarkdownToJsx デモ</h1>
       <div className="border rounded-lg shadow-sm ">
-        <MarkdownToJsx markdown={sampleMd} themeName="dark" />
+        <MarkdownToJsx markdown={sampleMd} themeName="myTheme" />
       </div>
-      <footer className="mt-8 text-center text-gray-500 text-sm">
-        <p>Markdown to JSX コンバーター - 2025</p>
-      </footer>
     </div>
   )
 })
